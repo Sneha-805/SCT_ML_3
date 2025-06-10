@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat V/S Dog Classifier</title>
+</head>
+<body>
+    <h1>🐾 Cat vs Dog Classifier</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image" width="200">
+    {% endif %}
+</body>
+</html>
