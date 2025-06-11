@@ -50,4 +50,4 @@ y_pred=svm.predict(X_test)
 print(classification_report(y_test,y_pred))
 
 os.makedirs("model",exist_ok=True)
-joblib.dump(svm,"svm_model.pkl")
+joblib.dump(svm,"svm_model.pkl",compress=3)
