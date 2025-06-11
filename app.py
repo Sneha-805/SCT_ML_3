@@ -10,7 +10,6 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER']=UPLOAD_FOLDER
 
 model=joblib.load("svm_model.pkl")
-joblib.dump(model, "svm_model.pkl", compress=3)
 CATEGORIES=["Cat","Dog"]
 
 @app.route('/', methods=['GET', 'POST'])
@@ -25,10 +24,10 @@ def index():
 
             img = cv2.imread(filepath, cv2.IMREAD_GRAYSCALE)
             img = cv2.resize(img, (100, 100))       
-            img = img.reshape(1, -1)                
+            img = img.flatten()              
 
             result = model.predict(img)
-            prediction = CATEGORIES[result]
+            prediction = CATEGORIES[result[0]]
             filename = file.filename
     return render_template('index.html', prediction=prediction, filename=filename)
 
