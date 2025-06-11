@@ -28,7 +28,7 @@ def index():
             img = img.reshape(1, -1)                
 
             result = model.predict(img)
-            prediction = CATEGORIES[result[0]]
+            prediction = CATEGORIES[result]
             filename = file.filename
     return render_template('index.html', prediction=prediction, filename=filename)
 
