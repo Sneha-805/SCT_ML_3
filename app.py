@@ -9,6 +9,7 @@ UPLOAD_FOLDER="static/uploads"
 app.config['UPLOAD_FOLDER']=UPLOAD_FOLDER
 
 model=joblib.load("svm_model.pkl")
+joblib.dump(model, "svm_model.pkl", compress=3)
 CATEGORIES=["Cat","Dog"]
 
 @app.route('/',methods=['GET','POST'])
@@ -26,3 +27,7 @@ def index():
             prediction=CATEGORIES[result[0]]
             filename=file.filename
     return render_template('index.html', prediction=prediction, filename=filename)
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
