@@ -24,7 +24,8 @@ def index():
 
             img = cv2.imread(filepath, cv2.IMREAD_GRAYSCALE)
             img = cv2.resize(img, (100, 100))       
-            img = img.flatten()              
+            img = img.flatten().reshape(1, -1)
+            
 
             result = model.predict(img)
             prediction = CATEGORIES[result[0]]
