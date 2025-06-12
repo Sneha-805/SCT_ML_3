@@ -10,7 +10,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER']=UPLOAD_FOLDER
 
 model=joblib.load("svm_model.pkl")
-CATEGORIES=["Cat","Dog"]
+CATEGORIES=["Dog","Cat"]
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
