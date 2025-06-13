@@ -3,6 +3,16 @@ import cv2
 import joblib
 import numpy as np
 import os
+import gdown
+
+MODEL_PATH = "svm_model.pkl"
+GOOGLE_DRIVE_FILE_ID = "1iocWFhT4AA7bOcT8LpFe8MuEfSUOmIr0"
+
+if not os.path.exists(MODEL_PATH):
+    url = f"https://drive.google.com/uc?id={GOOGLE_DRIVE_FILE_ID}"
+    print("Downloading model from Google Drive...")
+    gdown.download(url, MODEL_PATH, quiet=False)
+
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "static/uploads"
