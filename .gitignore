@@ -1,5 +1,7 @@
-dataset/
+__pycache__/
+*.pkl
+*.pyc
+*.DS_Store
+.env
 
 
-svm_model.pkl
-svm_model.pkl
