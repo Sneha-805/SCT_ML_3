@@ -1,7 +1,7 @@
-🐱🐶 Cat vs. Dog Image Classification with SVM
+# 🐱🐶 Cat vs. Dog Image Classification with SVM
 This project is part of Task 3 from my internship at SkillCraft Technology. The goal is to build an SVM (Support Vector Machine) model that classifies images as either a cat or a dog, and deploy the model using Flask.
 
-📌 Features
+## 📌 Features
 📥 Upload grayscale image of a cat or dog
 
 🤖 SVM model trained on resized 100x100 images
@@ -12,7 +12,7 @@ This project is part of Task 3 from my internship at SkillCraft Technology. The 
 
 🌐 Deployable on Render
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 Python, OpenCV
 
 Scikit-learn (SVM)
@@ -23,7 +23,7 @@ HTML/CSS (Jinja2)
 
 Git & GitHub
 
-📁 Dataset
+## 📁 Dataset
 Dataset used: Kaggle Cats vs Dogs Dataset
 
 ~8861 cat images
@@ -32,7 +32,7 @@ Dataset used: Kaggle Cats vs Dogs Dataset
 
 Preprocessed and flattened to grayscale 100x100 images
 
-🚀 How to Run Locally
+## 🚀 How to Run Locally
 Clone the repository:
 
 bash
@@ -65,7 +65,7 @@ http://127.0.0.1:5000
 
 ❌ Misclassifications may occur with noisy backgrounds or uncommon angles
 
-📂 Folder Structure
+## 📂 Folder Structure
 csharp
 Copy
 Edit
@@ -87,7 +87,7 @@ cat-dog-svm-flask/
 ├── svm_model.pkl       ← Trained model
 ├── README.md           ← You’re reading it!
 └── requirements.txt    ← Python dependencies
-👩‍💻 Author
+## 👩‍💻 Author
 Sneha Mudda
 B.Tech CSE, IIIT RK Valley
-LinkedIn | GitHub
+[LinkedIn](https://www.linkedin.com/in/sneha-mudda-b57819282/) | [GitHub](https://github.com/Sneha-805/)
